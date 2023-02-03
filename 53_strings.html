@@ -1,0 +1,50 @@
+<a href="https://javascript.info/string" style="font-size: 100px;">5.3 Strings</a>
+
+<script>
+
+// 1. done
+function ucFirst(str) {
+    if (!str) return str;
+
+    return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log( ucFirst("john") ); // John
+
+
+
+
+// 2. done
+function checkSpam(str) {
+    let lowerStr = str.toLowerCase();
+
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+console.log( checkSpam('buy ViAgRA now') );
+console.log( checkSpam('free xxxxx') );
+console.log( checkSpam("innocent rabbit") );
+
+
+
+
+// 3. done
+function truncate(str, maxlength) {
+    return (str.length > maxlength) ?
+        str.slice(0, maxlength - 1) + '…' : str;
+}
+
+console.log(truncate("What I'd like to tell on this topic is:", 20));
+
+
+
+
+// 4. done
+function extractCurrencyValue(str) {
+    return +str.slice(1);
+}
+
+console.log(extractCurrencyValue('$120'));
+
+
+</script>
